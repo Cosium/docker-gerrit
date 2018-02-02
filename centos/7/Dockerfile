@@ -24,4 +24,4 @@ VOLUME ["/var/gerrit/git", "/var/gerrit/index", "/var/gerrit/cache", "/var/gerri
 # Start Gerrit
 CMD git config -f /var/gerrit/etc/gerrit.config gerrit.canonicalWebUrl http://$HOSTNAME:8080/ && \
     git config -f /var/gerrit/etc/gerrit.config noteDb.changes.autoMigrate true && \
-    /var/gerrit/bin/gerrit.sh run
+    /var/gerrit/bin/gerrit.sh start
